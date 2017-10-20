@@ -2,6 +2,8 @@
 
 object Match {
   
+  // function which gives the result based on match case given by the user
+  
   def courseMatch(course : String) : String = course match {
     case "android" => "Android course Price is : 12999"
     case "big data development " => "Big data development course Price is : 17999"
@@ -13,7 +15,10 @@ object Match {
   def main(args: Array[String]) : Unit = {
     
     println("Acadgild course details : \nCourses Available at Acadgild are : \nAndroid \nBig Data Development \nSpark \nPlease Enter your Choice(eg. spark)..." )
+    
+    //user input
     var course = readLine().toString.toLowerCase 
+    //function call
     println(courseMatch(course))
     
   }
